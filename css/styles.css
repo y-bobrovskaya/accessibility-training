@@ -115,6 +115,28 @@
   line-height: 2.8;
   margin-bottom: 1rem;
 }
+
+.navbar-item.logo-link:focus,
+.button.is-info:focus,
+.button.is-link:focus,
+.button.is-text:focus,
+.link:focus,
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=checkbox]:focus,
+input[type=radio]:focus,
+select.select-field:focus, textarea.textarea:focus {
+  outline: 2px solid blue;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.link.is-white {
+  color: white;
+}
+
 .post {
   margin: 1rem;
   padding-bottom: 1rem;
