@@ -107,6 +107,14 @@
   padding: 0 .75rem;
 }
 
+.button.is-info, .button.is-link, .hero.is-info {
+  background-color: #0A5F94;
+}
+
+.hero.is-info .tabs.is-boxed li.is-active a, .hero.is-info .tabs.is-boxed li.is-active a:hover, .hero.is-info .tabs.is-toggle li.is-active a, .hero.is-info .tabs.is-toggle li.is-active a:hover {
+  color: #0A5F94;
+}
+
 .button.is-primary.is-alt {
   background: linear-gradient(to bottom, #0072ff, #00c6ff);
   font-weight: 700;
@@ -197,4 +205,32 @@ li {
   width: 40px;
   height: 40px;
   background-size: contain;
+}
+
+.subtitle {
+  color: #292929;
+}
+
+.tag:not(body).is-danger {
+  background-color: #BD0026;
+}
+
+.tag:not(body).is-primary {
+  background-color: #00705F;
+}
+
+.tag:not(body).is-success {
+  background-color: #16833C;
+}
+
+.help.is-success {
+  color: #16833C;
+}
+
+.has-text-grey-light {
+  color: #696969 !important;
+}
+
+.footer {
+  background-color: white;
 }
