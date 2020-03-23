@@ -20,7 +20,7 @@
             <a href="#" class="navbar-item logo-link">
               <img src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg">
             </a>
-            <span class="navbar-burger burger" data-target="navbarMenu">
+            <span class="navbar-burger burger" tabindex="0" aria-label="Navigation menu" data-target="navbarMenu" aria-haspopup="true" aria-owns="navbarMenu">
               <span></span>
               <span></span>
               <span></span>
@@ -77,7 +77,7 @@
           <form class="box">
             <div class="field is-grouped">
               <p class="control is-expanded">
-                <input class="input" type="email">
+                <input class="input" type="email" aria-label="your email">
               </p>
               <p class="control">
                 <button class="button is-info">Notify Me</button>
@@ -89,9 +89,9 @@
     </div>
   </header>
   <main>
-    <section class="section" id="about">
+    <section class="section" id="about" aria-labelledby="aboutTitle">
       <div class="section-heading has-text-centered">
-        <h2 class="title is-2">About Us</h2>
+        <h2 class="title is-2" id="aboutTitle">About Us</h2>
         <h5 class="subtitle is-5">We of all trades, master of "some"</h5>
         <div class="container">
           <p>Web developers with more than <b>4 years</b> of well-rounded experience with a degree in the
@@ -193,16 +193,16 @@
         <p lang="la">Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
       </div>
     </section>
-    <section class="hero has-background-grey-light">
+    <section class="hero has-background-grey-light" aria-labelledby="features">
       <div class="container features">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2">Three key features</h2>
+          <h2 class="title is-2" id="features">Three key features</h2>
           <h5 class="subtitle is-5">We don't hide what we do</h5>
         </div>
 
         <div class="columns">
           <div class="column is-4">
-            <div class="card is-shady">
+            <div class="card is-shady" tabindex="0">
               <div class="card-image has-text-centered">
                 <i class="fa fa-paw"></i>
               </div>
@@ -217,7 +217,7 @@
           </div>
 
           <div class="column is-4">
-            <div class="card is-shady">
+            <div class="card is-shady" tabindex="0">
               <div class="card-image has-text-centered">
                 <i class="fab fa-empire"></i>
               </div>
@@ -233,7 +233,7 @@
           </div>
 
           <div class="column is-4">
-            <div class="card is-shady">
+            <div class="card is-shady" tabindex="0">
               <div class="card-image has-text-centered">
                 <i class="fab fa-apple"></i>
               </div>
@@ -249,30 +249,30 @@
         </div>
       </div>
     </section>
-    <section>
+    <section aria-labelledby="topics">
       <div class="hero is-info">
         <div class="hero-body">
           <div class="container">
-            <h2 class="title">List of topics</h2>
+            <h2 class="title" id="topics">List of topics</h2>
             <h5 class="subtitle">We are always in touch we the outside world</h5>
           </div>
         </div>
-        <div class="tabs is-boxed is-centered main-menu" id="nav">
+        <div role="tablist" class="tabs is-boxed is-centered main-menu" id="nav">
           <ul>
-            <li data-target="pane-1" id="1" class="is-active">
-              <a href="#" class="link">
+            <li data-target="pictures-tab" id="pictures" class="is-active">
+              <a href="#pictures-tab" class="link">
                 <span class="icon is-small"><i class="fa fa-image"></i></span>
                 <span>Pictures</span>
               </a>
             </li>
-            <li data-target="pane-3" id="3">
-              <a href="#" class="link">
+            <li data-target="team-tab" id="team">
+              <a href="#team-tab" class="link">
                 <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
                 <span>Team</span>
               </a>
             </li>
-            <li data-target="pane-4" id="4">
-              <a href="#" class="link">
+            <li data-target="video-tab" id="video">
+              <a href="#video-tab" class="link">
                 <span class="icon is-small"><i class="fa fa-film"></i></span>
                 <span>Video</span>
               </a>
@@ -280,8 +280,9 @@
           </ul>
         </div>
       </div>
+      <!-- move up? -->
       <div class="tab-content container">
-        <div class="tab-pane is-active" id="pane-1" class="level">
+        <div role="tabpanel" tabindex="0" class="tab-pane is-active level" id="pictures-tab">
           <div class="container">
             <div class="columns features">
               <div class="column is-4">
@@ -337,7 +338,7 @@
           </div>
         </div>
 
-        <div class="tab-pane" id="pane-3">
+        <div role="tabpanel" tabindex="0" class="tab-pane" id="team-tab">
           <div class="columns medias">
             <div class="column">
               <div class="media">
@@ -398,7 +399,7 @@
           </div>
         </div>
 
-        <div class="tab-pane" id="pane-4">
+        <div role="tabpanel" tabindex="0" class="tab-pane" id="video-tab">
           <div class="columns is-centered">
             <div class="column is-three-quarters">
               <div class="title has-text-centered">Inspired video</div>
@@ -410,15 +411,15 @@
         </div>
       </div>
     </section>
-    <section class="section has-background-grey-lighter">
+    <section class="section has-background-grey-lighter" aria-labelledby="events">
       <div class="container has-text-centered">
           <div class="section-heading has-text-centered">
-            <h2 class="title is-2">Upcoming events</h2>
+            <h2 class="title is-2" id="events">Upcoming events</h2>
             <h5 class="subtitle is-5">Outcoming dates for the best options</h5>
           </div>
 
         <div class="tile is-ancestor">
-          <div class="tile is-parent">
+          <div class="tile is-parent" tabindex="0">
             <div class="tile is-child box">
               <div class="image">
                 <img src="./img/web-access-summit-eventbrite.jpg">
@@ -428,7 +429,7 @@
               <a href="#" class="link">Buy Tickets</a>
             </div>
           </div>
-          <div class="tile is-parent">
+          <div class="tile is-parent" tabindex="0">
             <div class="tile is-child box">
               <div class="image">
                 <img src="./img/access.jpg">
@@ -438,7 +439,7 @@
               <a href="#" class="link">Buy Tickets</a>
             </div>
           </div>
-          <div class="tile is-parent">
+          <div class="tile is-parent"  tabindex="0">
             <div class="tile is-child box">
               <div class="image">
                 <img src="./img/dotcss-2019.jpg">
@@ -451,7 +452,7 @@
         </div>
 
         <div class="tile is-ancestor">
-          <div class="tile is-parent">
+          <div class="tile is-parent" tabindex="0">
             <div class="tile is-child box">
               <div class="image">
                 <img src="./img/images.jpg">
@@ -461,7 +462,7 @@
               <a href="#" class="link">Buy Tickets</a>
             </div>
           </div>
-          <div class="tile is-parent">
+          <div class="tile is-parent" tabindex="0">
             <div class="tile is-child box">
               <div class="image">
                 <img src="./img/mid_300_33455472_313632022502906_5761920685983137792_n.png">
@@ -471,7 +472,7 @@
               <a href="#" class="link">Buy Tickets</a>
             </div>
           </div>
-          <div class="tile is-parent">
+          <div class="tile is-parent" tabindex="0">
             <div class="tile is-child box">
               <div class="image">
                 <img src="./img/access.jpg">
@@ -484,9 +485,9 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section" aria-labelledby="services">
       <div class="section-heading has-text-centered">
-        <h2 class="title is-2">Services</h2>
+        <h2 class="title is-2" id="services">Services</h2>
         <h5 class="subtitle is-5">What can I do for you?</h5>
       </div>
       <div class="container">
@@ -531,10 +532,10 @@
         </div>
       </div>
     </section>
-    <section class="section has-background-grey-lighter">
+    <section class="section has-background-grey-lighter" aria-labelledby="eventsPhotos">
       <div class="container">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2">Photos from past events</h2>
+          <h2 class="title is-2" id="eventsPhotos">Photos from past events</h2>
         </div>
 
         <div class="container portfolio-container">
@@ -695,10 +696,10 @@
         </div>
       </div>
       </section>
-    <section class="section">
+    <section class="section" aria-labelledby="forum">
       <div class="container">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2">Forum</h2>
+          <h2 class="title is-2" id="forum">Forum</h2>
           <h5 class="subtitle is-5">Discuss any topic with no leaving this page</h5>
         </div>
 
@@ -719,18 +720,18 @@
           </div>
           <div class="column is-9">
             <div class="box content">
-              <div class="post">
+              <div class="post" tabindex="0">
                 <b>How do you center a button in a box?</b>
                 <div class="media">
                   <div class="media-left">
-                    <p class="image is-32x32">
+                    <p class="image is-32x32" aria-hidden="true">
                       <img src="https://source.unsplash.com/random/64x64/?sig=300">
                     </p>
                   </div>
                   <div class="media-content">
                     <div class="content">
                       <p>
-                        <a>@jsmith</a> replied 34 minutes ago &nbsp;
+                        <a href="#forum">@jsmith</a> replied 34 minutes ago &nbsp;
                         <span class="tag">Question</span>
                       </p>
                     </div>
@@ -741,18 +742,18 @@
                 </div>
               </div>
 
-              <div class="post">
+              <div class="post" tabindex="0">
                 <b>How can I make a button go full width?</b>
                 <div class="media">
                   <div class="media-left">
-                    <p class="image is-32x32">
+                    <p class="image is-32x32" aria-hidden="true">
                       <img src="https://source.unsplash.com/random/64x64/?sig=301">
                     </p>
                   </div>
                   <div class="media-content">
                     <div class="content">
                       <p>
-                        <a>@red</a> replied 40 minutes ago &nbsp;
+                        <a href="#forum">@red</a> replied 40 minutes ago &nbsp;
                         <span class="tag">Question</span>
                       </p>
                     </div>
@@ -763,18 +764,18 @@
                 </div>
               </div>
 
-              <div class="post">
+              <div class="post" tabindex="0">
                 <b>TypeError: Data must be a string or a buffer when trying touse tabs</b>
                 <div class="media">
                   <div class="media-left">
-                    <p class="image is-32x32">
+                    <p class="image is-32x32" aria-hidden="true">
                       <img src="https://source.unsplash.com/random/64x64/?sig=302">
                     </p>
                   </div>
                   <div class="media-content">
                     <div class="content">
                       <p>
-                        <a>@jsmith</a> replied 53 minutes ago &nbsp;
+                        <a href="#forum">@jsmith</a> replied 53 minutes ago &nbsp;
                         <span class="tag">Question</span>
                       </p>
                     </div>
@@ -785,18 +786,18 @@
                 </div>
               </div>
 
-              <div class="post">
+              <div class="post" tabindex="0">
                 <b>How to vertically center elements?</b>
                 <div class="media">
                   <div class="media-left">
-                    <p class="image is-32x32">
+                    <p class="image is-32x32" aria-hidden="true">
                       <img src="https://source.unsplash.com/random/64x64/?sig=303">
                     </p>
                   </div>
                   <div class="media-content">
                     <div class="content">
                       <p>
-                        <a>@brown</a> replied 3 hours ago &nbsp;
+                        <a href="#forum">@brown</a> replied 3 hours ago &nbsp;
                         <span class="tag">Question</span>
                       </p>
                     </div>
@@ -807,18 +808,18 @@
                 </div>
               </div>
 
-              <div class="post">
+              <div class="post" tabindex="0">
                 <b>I'm trying to use hamburger menu on css, but it doesn't work. What is wrong?</b>
                 <div class="media">
                   <div class="media-left">
-                    <p class="image is-32x32">
+                    <p class="image is-32x32" aria-hidden="true">
                       <img src="https://source.unsplash.com/random/64x64/?sig=304">
                     </p>
                   </div>
                   <div class="media-content">
                     <div class="content">
                       <p>
-                        <a>@hamburgler</a> replied 5 hours ago &nbsp;
+                        <a href="#forum">@hamburgler</a> replied 5 hours ago &nbsp;
                         <span class="tag">Question</span>
                       </p>
                     </div>
@@ -829,18 +830,18 @@
                 </div>
               </div>
 
-              <div class="post">
+              <div class="post" tabindex="0">
                 <b>How to make tiles wrap with CSS?</b>
                 <div class="media">
                   <div class="media-left">
-                    <p class="image is-32x32">
+                    <p class="image is-32x32" aria-hidden="true">
                       <img src="https://source.unsplash.com/random/64x64/?sig=305">
                     </p>
                   </div>
                   <div class="media-content">
                     <div class="content">
                       <p>
-                        <a>@rapper</a> replied 3 hours ago &nbsp;
+                        <a href="#forum">@rapper</a> replied 3 hours ago &nbsp;
                         <span class="tag">Question</span>
                       </p>
                     </div>
@@ -855,10 +856,10 @@
         </div>
       </div>
     </section>
-    <section class="section has-background-light">
+    <section class="section has-background-light" aria-labelledby="contactUs">
       <div class="container">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2">Contact us</h2>
+          <h2 class="title is-2" id="contactUs">Contact us</h2>
           <h5 class="subtitle is-5">Don't hesitate, ask anything</h5>
         </div>
 
@@ -992,10 +993,10 @@
 
       <div class="content has-text-centered">
         <div class="soc">
-          <a class="link" href="#"><i class="fab fa-github-alt fa-2x"></i></a>
-          <a class="link" href="#"><i class="fab fa-youtube fa-2x"></i></a>
-          <a class="link" href="#"><i class="fab fa-facebook fa-2x"></i></a>
-          <a class="link" href="#"><i class="fab fa-twitter fa-2x"></i></a>
+          <a class="link" href="#" aria-label="github"><i class="fab fa-github-alt fa-2x"></i></a>
+          <a class="link" href="#" aria-label="youtube"><i class="fab fa-youtube fa-2x"></i></a>
+          <a class="link" href="#" aria-label="facebook"><i class="fab fa-facebook fa-2x"></i></a>
+          <a class="link" href="#" aria-label="twitter"><i class="fab fa-twitter fa-2x"></i></a>
         </div>
         <p>The source code is licensed <a class="link" href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
       </div>
