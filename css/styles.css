@@ -1,3 +1,7 @@
+a {
+  text-decoration: underline;
+}
+
 .hero-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../img/accessibility-hero-banner.jpg") no-repeat center center fixed;
@@ -167,8 +171,11 @@ select.select-field:focus, textarea.textarea:focus {
 }
 
 .logo-link {
-  height: 70px;
-  width: 250px;
+  width: 100px;
+  height: 28px;
+  line-height: 1;
+  padding: 0;
+  margin-top: 1rem;
 }
 
 .logo-link img {
@@ -213,6 +220,10 @@ li {
 
 .tag:not(body).is-danger {
   background-color: #BD0026;
+}
+
+.help.is-danger {
+  color: #BD0026;
 }
 
 .tag:not(body).is-primary {
