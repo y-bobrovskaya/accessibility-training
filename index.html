@@ -77,7 +77,7 @@
           <form class="box">
             <div class="field is-grouped">
               <p class="control is-expanded">
-                <input class="input" type="email" aria-label="your email">
+                <input class="input" type="email" placeholder="jsmith@example.com" aria-placeholder="jsmith@example.com" aria-label="your email" >
               </p>
               <p class="control">
                 <button class="button is-info">Notify Me</button>
@@ -865,16 +865,16 @@
 
         <form class="column is-half is-offset-one-quarter box">
           <div class="field">
-            <label class="label">Name</label>
+            <label id="nameField" class="label">Name</label>
             <div class="control">
-              <input class="input" type="text" placeholder="Text input">
+              <input aria-labelledby="nameField" class="input" type="text" placeholder="Text input">
             </div>
           </div>
 
           <div class="field">
-            <label class="label">Username</label>
+            <label id="userNameField" class="label">Username</label>
             <div class="control has-icons-left has-icons-right">
-              <input class="input is-success" type="text">
+              <input aria-labelledby="userNameField" class="input is-success" type="text">
               <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
               </span>
@@ -886,9 +886,9 @@
           </div>
 
           <div class="field">
-            <label class="label">Email</label>
+            <label id="emailField" class="label">Email</label>
             <div class="control has-icons-left has-icons-right">
-              <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+              <input aria-labelledby="emailField" class="input is-danger" type="email" placeholder="jsmith@example.com" aria-placeholder="jsmith@example.com" aria-invalid="true" value="hello@">
               <span class="icon is-small is-left">
                 <i class="fas fa-envelope"></i>
               </span>
@@ -900,10 +900,10 @@
           </div>
 
           <div class="field">
-            <label class="label">Subject</label>
+            <label id="subjectField" class="label">Subject</label>
             <div class="control">
               <div class="select">
-                <select class="select-field">
+                <select aria-labelledby="subjectField" class="select-field">
                   <option>Select dropdown</option>
                   <option>With options</option>
                 </select>
@@ -912,9 +912,9 @@
           </div>
 
           <div class="field">
-            <label class="label">Message</label>
+            <label id="messageField" class="label">Message</label>
             <div class="control">
-              <textarea class="textarea" placeholder="Textarea"></textarea>
+              <textarea aria-labelledby="messageField" class="textarea" placeholder="Textarea"></textarea>
             </div>
           </div>
 
@@ -1003,7 +1003,7 @@
     </div>
   </footer>
 
-  <div id="modal-card" class="modal modal-fx-3dSlit">
+  <div id="modal-card" class="modal modal-fx-3dSlit" role="dialog" aria-labelledby="JaneDoe" aria-modal="true">
     <div class="modal-background"></div>
     <div class="modal-content is-tiny">
       <div class="card">
@@ -1020,7 +1020,7 @@
               </div>
             </div>
             <div class="media-content">
-              <div class="title is-4">Jane Doe</div>
+              <div id="JaneDoe" class="title is-4">Jane Doe</div>
               <div class="subtitle is-6">@jane_doe</div>
             </div>
           </div>
@@ -1029,9 +1029,9 @@
             Bean's dinnahbucket bub geez bud sumpin' fierce ayuhpawt Bangah naw, Powrtland Museum of Aht down cellah sumpin' fierce hoppa bub If you can't stand the wintah you don't deserve the summah slower than molasses going uphill in January.
             Sgn'wahl shoggor hrii uaaah R'lyeh uh'e k'yarnak Hastur hupadgh li'hee, hai f'nilgh'ri nilgh'ri n'ghftor ngftaghu vulgtlagln h'hrii throd Nyarlathotep lloig, naflsll'ha nnnsll'ha athg y-ebunma goka chtenff ehyeog cehye. Zhro y'hah
             nogoth phlegeth stell'bsna orr'e ph'Hastur gnaiih throd, uln ya lw'nafh mg nar'luh li'hee wgah'n, sgn'wahl mg nakadishtu chlirgh hupadgh tharanak h'gnaiih.
-            <a>@testio</a>.
-            <a>#css</a>
-            <a>#responsive</a>
+            <a href="#">@testio</a>.
+            <a href="#">#css</a>
+            <a href="#">#responsive</a>
             <br>
             <time datetime="2018-02-02">12:45 AM - 20 June 2018</time>
           </div>
@@ -1041,7 +1041,7 @@
     <button class="modal-close is-large"></button>
   </div>
 
-  <div id="modal-image1" class="modal modal-fx-3dSlit">
+  <div id="modal-image1" class="modal modal-fx-3dSlit" role="dialog" aria-label="Singapur photo" aria-modal="true">
     <div class="modal-background"></div>
     <div class="modal-content is-huge is-image">
       <img src="https://source.unsplash.com/random/?sig=1">
@@ -1049,7 +1049,7 @@
     <button class="modal-close is-large"></button>
   </div>
 
-  <div id="modal-image2" class="modal modal-fx-superScaled">
+  <div id="modal-image2" class="modal modal-fx-superScaled" role="dialog" aria-label="Surfing photo" aria-modal="true">
     <div class="modal-background"></div>
     <div class="modal-content  is-image">
       <img src="https://source.unsplash.com/random/?sig=3">
