@@ -29,38 +29,58 @@
 
           <div id="navbarMenu" class="navbar-menu">
             <nav class="navbar-end">
-              <p class="navbar-item">
-                <a href="#" class="link is-white">
+              <div class="navbar-item">
+                <button id="menuButton" class="menu-button is-white" aria-expanded="false" aria-haspopup="true">
                   <span class="icon">
                     <i class="fa fa-home"></i>
                   </span>
                   <span>Home</span>
-                </a>
-              </p>
-              <p class="navbar-item">
+                  <span class="arrow-icon">&#129171</span>
+                </button>
+                <ul class="popup-menu">
+                  <li class="popup-menu-item">
+                    <a href="#aboutTitle">Administration</a>
+                  </li>
+                  <li class="popup-menu-item">
+                    <a href="#features">Team Settings</a>
+                  </li>
+                  <li class="popup-menu-item">
+                    <a href="#topics">Manage Your Team</a>
+                  </li>
+                  <li class="popup-menu-item">
+                    <a href="#events">Invitations</a>
+                  </li>
+                  <li class="separator"></li>
+                  <li class="popup-menu-item">
+                    <a href="#contactUs">Authentication</a>
+                  </li>
+                </ul>
+
+              </div>
+              <div class="navbar-item">
                 <a href="#" class="link is-white">
                   <span class="icon">
                     <i class="fab fa-superpowers"></i>
                   </span>
                   <span>Examples</span>
                 </a>
-              </p>
-              <p class="navbar-item">
+              </div>
+              <div class="navbar-item">
                 <a href="#" class="link is-white">
                   <span class="icon">
                     <i class="fa fa-book"></i>
                   </span>
                   <span>Documentation</span>
                 </a>
-              </p>
-              <p class="navbar-item">
+              </div>
+              <div class="navbar-item">
                 <a href="#" class="link is-white">
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
                   <span>View Source</span>
                 </a>
-              </p>
+              </div>
             </nav>
           </div>
         </div>
@@ -257,35 +277,26 @@
             <h5 class="subtitle">We are always in touch we the outside world</h5>
           </div>
         </div>
-        <div role="tablist" class="tabs is-boxed is-centered main-menu" id="nav">
-          <ul>
-            <li data-target="pictures-tab" id="pictures" class="is-active">
-              <a href="#pictures-tab" class="link">
-                <span class="icon is-small"><i class="fa fa-image"></i></span>
-                <span>Pictures</span>
-              </a>
-            </li>
-            <li data-target="team-tab" id="team">
-              <a href="#team-tab" class="link">
-                <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
-                <span>Team</span>
-              </a>
-            </li>
-            <li data-target="video-tab" id="video">
-              <a href="#video-tab" class="link">
-                <span class="icon is-small"><i class="fa fa-film"></i></span>
-                <span>Video</span>
-              </a>
-            </li>
-          </ul>
+        <div role="tablist" class="tabs is-boxed is-centered main-menu" aria-labelledby="topics" id="nav" aria-orientation="horizontal">
+            <button role="tab" data-target="pictures-tab" id="pictures" class="is-active tab" aria-selected="true">
+              <span class="icon is-small"><i class="fa fa-image"></i></span>
+              <span>Pictures</span>
+            </button>
+            <button role="tab" data-target="team-tab" id="team" tabindex="-1" class="tab" aria-selected="false">
+              <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
+              <span>Team</span>
+            </button>
+            <button role="tab" data-target="video-tab" id="video" tabindex="-1" class="tab" aria-selected="false">
+              <span class="icon is-small"><i class="fa fa-film"></i></span>
+              <span>Video</span>
+            </button>
         </div>
       </div>
-      <!-- move up? -->
       <div class="tab-content container">
-        <div role="tabpanel" tabindex="0" class="tab-pane is-active level" id="pictures-tab">
+        <div role="tabpanel" class="tab-pane is-active level" id="pictures-tab" aria-labelledby="pictures">
           <div class="container">
             <div class="columns features">
-              <div class="column is-4">
+              <div class="column is-4" tabindex="0">
                 <div class="card">
                   <div class="card-image">
                     <div class="image is-4by3">
@@ -301,7 +312,7 @@
                   </div>
                 </div>
               </div>
-              <div class="column is-4">
+              <div class="column is-4" tabindex="0">
                 <div class="card">
                   <div class="card-image">
                     <div class="image is-4by3">
@@ -318,7 +329,7 @@
                   </div>
                 </div>
               </div>
-              <div class="column is-4 modal-button" data-target="modal-image">
+              <div class="column is-4 modal-button" data-target="modal-image" tabindex="0">
                 <div class="card">
                   <div class="card-image">
                     <div class="image is-4by3">
@@ -338,7 +349,7 @@
           </div>
         </div>
 
-        <div role="tabpanel" tabindex="0" class="tab-pane" id="team-tab">
+        <div role="tabpanel" class="tab-pane" id="team-tab" aria-labelledby="team">
           <div class="columns medias">
             <div class="column">
               <div class="media">
@@ -399,7 +410,7 @@
           </div>
         </div>
 
-        <div role="tabpanel" tabindex="0" class="tab-pane" id="video-tab">
+        <div role="tabpanel" class="tab-pane" id="video-tab" aria-labelledby="video">
           <div class="columns is-centered">
             <div class="column is-three-quarters">
               <div class="title has-text-centered">Inspired video</div>
